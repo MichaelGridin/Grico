@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <nav class="navbar">
         <a class="nav-link">SOLUTIONS</a>
         <a class="nav-link">SERVICES</a>
@@ -16,6 +18,10 @@
         <a class="nav-link">CONTACT</a>
         <button class="nav-button">GET A QUOTE</button>
     </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+    </header>
     <main>
         <div class="text-div">
             <h1>GET IN TOUCH</h1>
@@ -81,5 +87,14 @@
         <span class="copyright-span">Copyright 2021 - All right reserved</span>
         </div>
     </footer>
+    <script>
+        const overflow = document.querySelector("body");
+        const navToggleLabel = document.querySelector(".nav-toggle-label");
+        const overflow2 = document.querySelector(".nav-toggle:checked");
+        function addOverflow() {
+            overflow.classList.toggle("overflow");
+        }
+        navToggleLabel.addEventListener('click', addOverflow);
+    </script>
 </body>
 </html>
